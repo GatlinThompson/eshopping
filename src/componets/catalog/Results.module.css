@@ -1,0 +1,12 @@
+.results {
+  border-bottom: 2px solid rgb(165, 164, 164);
+}
+
+.results-text {
+  font-size: 1.1rem;
+}
+
+.results-text > span {
+  color: rgb(252, 42, 0);
+  font-weight: 600;
+}

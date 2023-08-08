@@ -1,0 +1,17 @@
+.menu {
+  padding-left: 5px;
+  list-style: none;
+  overflow: hidden;
+  height: 0;
+  transition: all ease 350ms;
+  margin-bottom: 0;
+}
+
+.growing {
+  height: 0px;
+
+  transition: all ease 350ms;
+}
+ul.menu.clicked {
+  height: 100px;
+}

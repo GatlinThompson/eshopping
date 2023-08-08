@@ -1,0 +1,29 @@
+.error-button {
+  background-color: #febd69;
+  border: none;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.4rem;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
+  transition: background-color ease 150ms, scale ease 150ms,
+    box-shadow ease 150ms;
+}
+
+.error-button:hover {
+  background-color: #e99b34;
+  scale: 1.02;
+  box-shadow: 0px 10px 20px -3px rgba(0, 0, 0, 0.5);
+}
+
+.error-button > a {
+  color: #131921;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.button-container {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+}

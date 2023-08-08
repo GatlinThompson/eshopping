@@ -1,0 +1,72 @@
+.error-body {
+  margin: auto;
+  width: 60%;
+}
+
+.sorry {
+  color: #666666;
+  font-weight: 300;
+  font-size: 6rem;
+  margin-bottom: 0.1rem;
+}
+
+.context {
+  color: #666666;
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-top: -1rem;
+}
+
+@media all and (max-width: 425px) {
+  .error-body {
+    width: 90%;
+  }
+
+  .sorry {
+    font-size: 4.4rem;
+  }
+
+  .context {
+    font-size: 1.5rem;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .error-body {
+    width: 80%;
+  }
+
+  .sorry {
+    font-size: 5rem;
+  }
+
+  .context {
+    font-size: 2rem;
+  }
+}
+
+.error-button {
+  margin-top: 1rem;
+  background-color: #febd69;
+  border: none;
+  padding: 0.5rem 0.5rem;
+  position: relative;
+  margin-left: 5%;
+  border-radius: 0.4rem;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
+  transition: background-color ease 150ms, scale ease 150ms,
+    box-shadow ease 150ms;
+}
+
+.error-button:hover {
+  background-color: #e99b34;
+  scale: 1.02;
+  box-shadow: 0px 10px 20px -3px rgba(0, 0, 0, 0.5);
+}
+
+.error-button > a {
+  color: #131921;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.5rem;
+}

@@ -1,0 +1,23 @@
+ul.list {
+  margin-top: 2rem;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  padding: auto;
+  gap: 3rem;
+}
+
+@media all and (max-width: 984px) {
+  ul.list {
+    padding-left: 7.5%;
+  }
+}
+
+@media all and (max-width: 750px) {
+  ul.list {
+    padding-left: 0;
+    gap: 1rem;
+  }
+}

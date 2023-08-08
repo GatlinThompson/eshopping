@@ -1,0 +1,29 @@
+.list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+}
+
+@media all and (max-width: 767px) {
+  .list {
+    padding-top: 2rem;
+    width: 100%;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0;
+  }
+}
+
+.list > li {
+  padding-left: 0;
+}
+
+.header {
+  border-top: 2px solid rgb(165, 164, 164);
+}
