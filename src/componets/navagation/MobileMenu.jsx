@@ -22,7 +22,6 @@ const MobileMenu = (props) => {
   }, [userCtx]);
 
   const closeMenu = () => {
-    console.log("ASDSA");
     props.closeMenu();
   };
 
