@@ -73,7 +73,7 @@ const Related = (props) => {
       <div className="container">
         {!error && !isLoading && (
           <>
-            <h3 className="mt-3">Related Items</h3>
+            <h3 className={`mt-3 ${classes.title}`}>Related Items</h3>
             <ul className={`${classes.list}`}>
               {relatedItems.map((relatedItem) => (
                 <RelatedItem key={relatedItem.id} item={relatedItem} />

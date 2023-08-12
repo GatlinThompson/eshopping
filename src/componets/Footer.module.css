@@ -1,0 +1,22 @@
+.footer {
+  width: 100%;
+  background-color: #131921;
+
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  height: 50px;
+}
+
+.footer-container {
+  display: flex;
+  gap: 1.8rem;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.footer-container > p {
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  color: rgb(224, 223, 223);
+}

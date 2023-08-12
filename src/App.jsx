@@ -6,6 +6,13 @@ import CatalogPage from "./pages/Catalog";
 import ErrorPage from "./pages/Error";
 import ItemPage from "./pages/Item";
 import LoginPage from "./pages/Login";
+import SignUpPage from "./pages/SignUp";
+import CartPage from "./pages/Cart";
+import { useContext, useEffect } from "react";
+import UserContext from "./store/user-context";
+import { auth } from "../firebase";
+
+import UserProvider from "./store/UserProvider";
 
 const router = createBrowserRouter([
   {
@@ -20,15 +27,17 @@ const router = createBrowserRouter([
       { path: "item", element: <ItemPage /> },
       { path: "item/:itemName", element: <ItemPage /> },
       { path: "login", element: <LoginPage /> },
+      { path: "signup", element: <SignUpPage /> },
+      { path: "cart", element: <CartPage /> },
     ],
   },
 ]);
 
 function App() {
   return (
-    <>
+    <UserProvider>
       <RouterProvider router={router} />
-    </>
+    </UserProvider>
   );
 }
 

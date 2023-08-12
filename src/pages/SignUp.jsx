@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import Signin from "../componets/auth/Signin";
+import SignUp from "../componets/auth/SignUp";
 import { useEffect } from "react";
 import { auth } from "../../firebase";
-const LoginPage = () => {
-  const navigate = useNavigate();
 
+const SignUpPage = () => {
+  const navigate = useNavigate();
   const returnHome = () => {
     return navigate("..");
   };
@@ -12,15 +12,16 @@ const LoginPage = () => {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
-        returnHome();
+        //returnHome();
       }
     });
   }, []);
+
   return (
     <>
-      <Signin />
+      <SignUp />
     </>
   );
 };
 
-export default LoginPage;
+export default SignUpPage;

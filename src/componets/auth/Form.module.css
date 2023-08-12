@@ -1,0 +1,106 @@
+.form {
+  padding-top: 11rem;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.form > h1 {
+  color: #666666;
+  font-weight: 300;
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  font-family: "Lato", sans-serif;
+}
+
+.form-control {
+  margin-top: 1rem;
+}
+
+.form-control > input {
+  font-size: 2rem;
+  font-family: "Lato", sans-serif;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  width: 80%;
+  margin-bottom: 1rem;
+  transition: all 100ms linear;
+  background-color: transparent;
+}
+
+.form-control > input:focus {
+  border-bottom: 3px solid rgb(246, 161, 4);
+  transition: all 100ms linear;
+}
+
+@media all and (max-width: 1024px) {
+  .form-control > input {
+    font-size: 1.5rem;
+    width: 90%;
+  }
+  .form-control > input:focus {
+    border-bottom: 3px solid rgb(246, 161, 4);
+    transition: all 100ms linear;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .form {
+    padding-top: 5rem;
+  }
+
+  .form > h1 {
+    font-size: 4rem;
+  }
+
+  .form-control > input {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  .form-control > input:focus {
+    border-bottom: 3px solid rgb(246, 161, 4);
+    transition: all 100ms linear;
+  }
+}
+
+.button {
+  background-color: #febd69;
+  border: none;
+  padding: 0.5rem 1rem;
+  position: relative;
+  border-radius: 0.4rem;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
+  transition: background-color ease 150ms, scale ease 150ms,
+    box-shadow ease 150ms;
+  color: #131921;
+  margin-top: 1.25rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.button:hover {
+  background-color: #e99b34;
+  scale: 1.02;
+  box-shadow: 0px 10px 20px -3px rgba(0, 0, 0, 0.5);
+}
+
+.link {
+  margin-top: 1rem;
+  outline: none;
+  border: none;
+  margin-left: 2rem;
+}
+
+.link > a {
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+@media all and (max-width: 425px) {
+  .link {
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+}

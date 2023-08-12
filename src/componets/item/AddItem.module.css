@@ -1,0 +1,96 @@
+.button {
+  background-color: #febd69;
+  border: none;
+  padding: 0.5rem 0.5rem;
+  position: relative;
+  border-radius: 0.4rem;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
+  transition: background-color ease 150ms, scale ease 150ms,
+    box-shadow ease 150ms;
+  color: #131921;
+  margin-left: 2rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.button:hover {
+  background-color: #e99b34;
+  scale: 1.02;
+  box-shadow: 0px 10px 20px -3px rgba(0, 0, 0, 0.5);
+}
+
+.form {
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 0.7rem;
+}
+
+.form > div {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 0.7rem;
+}
+
+.qty {
+  display: flex;
+  flex-flow: column;
+  gap: 0.4rem;
+}
+
+.qty-display > input {
+  font-size: 2rem;
+  width: 10rem;
+  padding: 0.5rem;
+  text-align: center;
+  background-color: white;
+  user-select: none;
+}
+.qty-button {
+  border-radius: 0.4rem;
+  box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.3);
+  background-color: #e9a347;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  outline: none;
+  border: none;
+  transition: background-color ease 150ms, scale ease 150ms,
+    box-shadow ease 150ms;
+}
+
+.qty-button > p {
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 60px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+.qty-button:hover {
+  background-color: #ec9019;
+  scale: 1.02;
+  box-shadow: 0px 6px 10px -3px rgba(0, 0, 0, 0.4);
+}
+
+@media all and (max-width: 1024px) {
+  .button {
+    margin-left: 0;
+    font-size: 1.25rem;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .button {
+    margin-left: 0;
+  }
+}

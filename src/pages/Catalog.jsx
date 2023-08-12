@@ -59,7 +59,7 @@ const CatalogPage = () => {
   return (
     <main>
       <Results length={products.length} searchedItem={itemName} />
-      <div className="container">
+      <div className="container mb-5 pb-5">
         {!error && !isLoading && (
           <List>
             {products.map((product) => (

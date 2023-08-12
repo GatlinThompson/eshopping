@@ -6,7 +6,7 @@ ul.list {
   flex-flow: row wrap;
   justify-content: flex-start;
   padding: auto;
-  gap: 3rem;
+  gap: 1.5rem;
 }
 
 @media all and (max-width: 984px) {

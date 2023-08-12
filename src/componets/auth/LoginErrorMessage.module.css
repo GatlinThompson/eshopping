@@ -1,0 +1,21 @@
+.error {
+  margin-top: 1rem;
+}
+
+.error > p {
+  color: rgb(231, 4, 4);
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+@media all and (max-width: 1024px) {
+  .error > p {
+    font-size: 1.3rem;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .error > p {
+    font-size: 1rem;
+  }
+}

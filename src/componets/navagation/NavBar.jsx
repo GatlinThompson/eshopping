@@ -21,6 +21,7 @@ const NavBar = () => {
 
       const timer2 = setTimeout(() => {
         setShowNav(false);
+        clearTimeout(timer2);
       }, 350);
     } else {
       setShowNav(true);
@@ -28,6 +29,7 @@ const NavBar = () => {
       const timer = setTimeout(() => {
         setClicked("clicked");
         setGrowing("");
+        clearTimeout(timer);
       }, 1);
     }
   };
@@ -56,7 +58,11 @@ const NavBar = () => {
       </div>
       {showNav && (
         <div className="container-fluid d-md-none m-0 p-0">
-          <MobileMenu clicked={clicked} growing={growing} />
+          <MobileMenu
+            clicked={clicked}
+            growing={growing}
+            closeMenu={showNavHandler}
+          />
         </div>
       )}
     </nav>

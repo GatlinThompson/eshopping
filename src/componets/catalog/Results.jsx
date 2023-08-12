@@ -6,7 +6,7 @@ const Results = (props) => {
     results = "result";
   }
   return (
-    <div className={`mt-3 ${classes.results}`}>
+    <div className={`pt-3 ${classes.results}`}>
       <div className="container">
         <p className={classes["results-text"]}>
           {props.length} {results} for{" "}

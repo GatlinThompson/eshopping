@@ -6,6 +6,7 @@
   height: 100%;
   margin: 0;
   gap: 1.3rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .button-menu {
@@ -13,9 +14,27 @@
   background-color: transparent;
   border: none;
 }
-.button-menu > a > i {
+.cart > i {
   color: white;
-  font-size: 1.7rem;
+  font-size: 2.5rem;
+}
+
+.button-menu > a {
+  color: white;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+}
+
+.button-menu > a > p {
+  margin: 0;
+  font-size: 1.5rem;
+  padding-left: 0.3rem;
+}
+.button-menu p {
+  margin: 0;
+  font-size: 1.5rem;
+  padding-left: 0.3rem;
 }
 
 .item {
@@ -49,9 +68,49 @@
   box-shadow: 0px 10px 20px -3px rgba(0, 0, 0, 0.5);
 }
 
-.sign-button > a {
+.sign-button {
   color: #131921;
   text-decoration: none;
   font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.cart {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-text {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 1rem;
+  font-weight: 700;
+}
+
+.cart-text > span {
+  color: orange;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+@media all and (max-width: 1024px) {
+  .sign-button {
+    font-size: 1rem;
+  }
+
+  .button-menu > a > i {
+    font-size: 2rem;
+  }
+
+  .button-menu > a > p {
+    font-size: 1rem;
+    padding-left: 0.2rem;
+  }
+
+  .sign-button {
+    padding: 0.5rem 0.3rem;
+  }
 }

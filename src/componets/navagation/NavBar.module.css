@@ -3,6 +3,7 @@
   background-color: #131921;
   color: white;
   overflow: hidden;
+  font-family: "Roboto", sans-serif;
 }
 
 .navbar {
@@ -35,15 +36,15 @@
   text-decoration: none;
   color: white;
 }
-.logo > a > h4 {
-  font-size: 1.5rem;
-  font-weight: 400;
+.logo > h4 > a {
+  font-size: 2rem;
+  font-weight: 600;
   color: white;
 }
 
 .logo > h4 > a > span {
   color: #e99b34;
-  font-size: 1.7rem;
+  font-size: 2.2rem;
   font-weight: 600;
 }
 
@@ -62,9 +63,29 @@
   font-size: 2.5rem;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1024px) {
   .nav-items {
     padding-right: 0;
+  }
+
+  .logo > h4 > a {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+  }
+
+  .logo > h4 > a > span {
+    color: #e99b34;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .logo {
+    min-width: 20%;
+  }
+
+  .nav-items {
+    min-width: 30%;
   }
 }
 
