@@ -38,6 +38,7 @@ const NavBar = () => {
     if (!showNav) {
       return;
     }
+    console.log("ASDASDASD");
     showNavHandler();
   };
 
@@ -52,7 +53,7 @@ const NavBar = () => {
             </NavLink>
           </h4>
         </div>
-        <SearchBar className={classes["search-bar"]} onTouchStart={closeMenu} />
+        <SearchBar className={classes["search-bar"]} onClick={closeMenu} />
         <div className={`d-none d-md-flex ${classes["nav-items"]}`}>
           <ComputerMenu />
         </div>

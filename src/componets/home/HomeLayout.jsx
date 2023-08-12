@@ -1,5 +1,5 @@
 const HomeLayout = () => {
-  return <main>Home</main>;
+  return <main>Homeaaa</main>;
 };
 
 export default HomeLayout;
