@@ -1,0 +1,13 @@
+.loading {
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 5rem;
+  color: #787777;
+  font-weight: 300;
+}
+
+@media all and (max-width: 425px) {
+}
+.loading {
+  font-size: 3rem;
+}

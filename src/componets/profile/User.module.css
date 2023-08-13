@@ -1,0 +1,16 @@
+.user {
+  max-width: 100%;
+  margin-top: 2.5rem;
+}
+
+.user > h2 {
+  color: #5f5e5e;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+  word-wrap: break-word;
+}
+
+.user > h2 > span {
+  font-weight: 300;
+  margin-left: 0.3rem;
+}

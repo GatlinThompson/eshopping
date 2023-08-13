@@ -1,0 +1,31 @@
+.title {
+  padding-top: 3rem;
+  color: #646363;
+  text-align: center;
+  margin: auto;
+  font-weight: 300;
+  font-size: 4rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.no-orders {
+  border-top: 1px solid gray;
+  padding: 1rem;
+  padding-top: 2rem;
+  text-align: center;
+  color: #424141;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.orders {
+  margin-bottom: 7rem;
+}
+
+@media all and (max-width: 425px) {
+  .title {
+    font-size: 2.4rem;
+  }
+}

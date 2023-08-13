@@ -14,27 +14,24 @@ const MobileMenu = (props) => {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
-        setName(user.displayName);
+        setName(userCtx.name);
       } else {
         setName("");
       }
     });
   }, [userCtx]);
 
-  const closeMenu = () => {
-    props.closeMenu();
-  };
-
   const signOutHandler = () => {
     userCtx.clearUser();
     auth.signOut();
   };
+
   return (
     <ul className={`${classes.menu} ${classes[clicked]} ${classes[growing]}`}>
       <li className={`${classes.logo}`}>
         <h4>
           <NavLink to="/">
-            <span>e</span>Shopping{" "}
+            <span>e</span>Shopping
           </NavLink>
         </h4>
       </li>
@@ -67,7 +64,7 @@ const MobileMenu = (props) => {
       {userCtx.loggedIn && (
         <li className={classes.item}>
           <button type="button" className={classes["button-menu"]}>
-            <NavLink to="login">
+            <NavLink to="/profile">
               <div className={classes.cart}>
                 <i className="bi bi-person-fill"></i>
                 <p className="">{name}</p>

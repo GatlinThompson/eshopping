@@ -1,0 +1,172 @@
+.item {
+  width: calc(25% - 1.5rem);
+  height: 350px;
+}
+.item > a {
+  text-decoration: none;
+  color: black;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 0.3rem;
+  border: 1px solid rgba(211, 209, 209, 0.961);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
+  padding: 0.7rem 1rem 1.8rem;
+  display: flex;
+  flex-flow: column;
+  gap: 1.3rem;
+  transition: all 300ms ease;
+}
+
+.content:hover,
+.login:hover,
+.login-item:hover {
+  box-shadow: 0px 1px 5px -3px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.image-container {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.3rem;
+}
+
+.image {
+  width: calc(50% - 0.5rem);
+  height: calc(50% - 0.5rem);
+  background-color: rgb(216, 212, 212);
+  border: 1px solid rgba(211, 209, 209, 0.961);
+  border-radius: 0.1rem;
+  box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.loading {
+  margin: 0;
+  font-size: 1.5rem;
+  color: rgb(184, 182, 182);
+}
+
+.image > img,
+.deal-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*Login Block Styling*/
+.signin-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.login,
+.login-item {
+  background-color: white;
+  padding: 1.3rem;
+  border: 1px solid rgba(211, 209, 209, 0.961);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
+  transition: all 300ms ease;
+}
+
+.login-button {
+  margin-top: 0.5rem;
+}
+
+.login-buton > a {
+  text-decoration: none;
+}
+
+.button {
+  width: 100%;
+  background-color: #ffdd02;
+  border: none;
+  width: 100%;
+  margin: auto;
+  box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.2);
+  border-radius: 0.4rem;
+  color: #131921;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.25rem;
+  transition: background-color ease 150ms, scale ease 150ms,
+    box-shadow ease 150ms;
+}
+
+.button:hover {
+  background-color: #f3d407;
+  scale: 1.02;
+  box-shadow: 0px 7px 10px -3px rgba(0, 0, 0, 0.3);
+}
+
+.login-item {
+  flex-grow: 1;
+  padding: 0.9rem 1.3rem;
+}
+
+.login-item > a {
+  text-decoration: none;
+  color: black;
+}
+
+.deal-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 100%;
+  gap: 0.5rem;
+}
+.login-image {
+  padding: 0.5rem 1.5rem;
+  width: 100%;
+  height: 10px;
+  flex-grow: 1;
+}
+
+.deal-image {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(216, 212, 212);
+  border: 1px solid rgba(211, 209, 209, 0.961);
+  border-radius: 0.1rem;
+  box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+@media all and (max-width: 1024px) {
+  .item {
+    width: calc(33% - 1.5rem);
+    height: 350px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .item {
+    width: calc(50% - 1.5rem);
+    height: 350px;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .item {
+    width: calc(100% - 1.5rem);
+    height: 400px;
+  }
+}

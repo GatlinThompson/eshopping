@@ -13,7 +13,7 @@ const Order = () => {
   const [isformValid, setFormValid] = useState(false);
   const [placedOrder, setPlacedOrder] = useState(false);
   const [shippingInfo, setShippingInfo] = useState([]);
-  const { isLoading2, error1, sendRequest: sendOrder } = useHttp();
+  const { isLoading, error, sendRequest: sendOrder } = useHttp();
 
   useEffect(() => {
     if (userCtx.cart.length > 0) {
@@ -22,12 +22,6 @@ const Order = () => {
     navigate("/");
   }, []);
 
-  const shipData = {
-    shippingInfo: [],
-    cart: userCtx.cart,
-    total: userCtx.totalAmount,
-  };
-
   const formValid = (valid, data) => {
     setFormValid(valid);
     setShippingInfo(data);
@@ -35,11 +29,12 @@ const Order = () => {
 
   const sendOrderDB = (shipping, cart, total, user) => {
     const userID = JSON.stringify(user);
+    const date = new Date().toDateString();
 
     sendOrder({
       url: `https://eshoppi-b6671-default-rtdb.firebaseio.com/users/${userID}/orders.json`,
       method: "POST",
-      body: { shipping: shipping, cart: cart, total: total },
+      body: { shipping: shipping, cart: cart, total: total, date: date },
     });
   };
 
@@ -49,6 +44,7 @@ const Order = () => {
     if (userCtx.loggedIn) {
       sendOrderDB(shippingInfo, userCtx.cart, userCtx.totalAmount, userCtx.id);
     }
+
     userCtx.order();
   };
 
@@ -71,7 +67,7 @@ const Order = () => {
             <span className={classes.money}>$</span>
             {userCtx.totalAmount.toFixed(2)}
           </h1>
-          <div className={`container my-5 pb-5 ${classes["button-container"]}`}>
+          <div className={`container ${classes["button-container"]}`}>
             <button
               className={classes.button}
               disabled={!isformValid}
@@ -85,12 +81,17 @@ const Order = () => {
       {placedOrder && (
         <div className={classes["placed-backdrop"]}>
           <div className={classes.order}>
-            <h3>Order Placed</h3>
-            <Link to="/">
-              <button type="button" className={classes["button"]}>
-                Return Home
-              </button>
-            </Link>
+            {isLoading && <h3>Placing Order...</h3>}
+            {!isLoading && (
+              <>
+                <h3>Order Placed</h3>
+                <Link to="/">
+                  <button type="button" className={classes["button"]}>
+                    Return Home
+                  </button>
+                </Link>
+              </>
+            )}
           </div>
         </div>
       )}

@@ -27,17 +27,17 @@ const Signin = () => {
       .signInWithEmailAndPassword(email, password)
       .then((userCredential) => {
         setLoginError(false);
-        console.log(userCredential.user.name);
         userCtx.clearUser();
         userCtx.login(userCredential.user.displayName, userCredential.user.uid);
         navigate("..");
       })
       .catch((error) => {
         setLoginError(true);
-        console.log(error);
+
         setErrorMessage(error.message);
       });
   };
+
   return (
     <main className="container">
       <form onSubmit={login} className={classes.form}>

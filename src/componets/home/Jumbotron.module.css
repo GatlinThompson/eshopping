@@ -1,0 +1,68 @@
+.jumbotron {
+  background: linear-gradient(#bae0b9 70%, rgba(145, 152, 229, 0) 100%);
+  width: 100%;
+  height: 400px;
+  padding: 5rem 5rem 0rem;
+}
+
+.header {
+  width: 60%;
+  margin: auto;
+  height: 100%;
+}
+
+.logo {
+  font-size: 3.3rem;
+  font-weight: 700;
+  color: #232f3d;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.logo > span {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.sub-header {
+  color: #232f3d;
+  margin-left: 5rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+@media all and (max-width: 768px) {
+  .header {
+    width: 80%;
+  }
+
+  .jumbotron {
+    height: 300px;
+    padding: 3rem 1rem 0rem;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .header {
+    width: 100%;
+  }
+  .jumbotron {
+    padding: 3rem 1rem 0rem;
+    height: 200px;
+  }
+
+  .sub-header {
+    color: #232f3d;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .logo {
+    font-size: 2.7rem;
+  }
+
+  .logo > span {
+    font-size: 2.3rem;
+  }
+}

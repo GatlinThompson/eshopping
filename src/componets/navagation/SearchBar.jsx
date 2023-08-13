@@ -15,9 +15,11 @@ const SearchBar = () => {
     if (item.trim().length === 0) {
       return navigate(".");
     }
+
     navigate("/catalog/" + item.trim());
     setItem("");
   };
+
   return (
     <form onSubmit={onSubmitHandler} className={classes["search-bar"]}>
       <div className={classes.search}>

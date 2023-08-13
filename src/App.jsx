@@ -8,10 +8,7 @@ import ItemPage from "./pages/Item";
 import LoginPage from "./pages/Login";
 import SignUpPage from "./pages/SignUp";
 import CartPage from "./pages/Cart";
-import { useContext, useEffect } from "react";
-import UserContext from "./store/user-context";
-import { auth } from "../firebase";
-
+import ProfilePage from "./pages/Profile";
 import UserProvider from "./store/UserProvider";
 import OrderPage from "./pages/Order";
 
@@ -31,6 +28,7 @@ const router = createBrowserRouter([
       { path: "signup", element: <SignUpPage /> },
       { path: "cart", element: <CartPage /> },
       { path: "order", element: <OrderPage /> },
+      { path: "profile", element: <ProfilePage /> },
     ],
   },
 ]);

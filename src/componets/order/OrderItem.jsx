@@ -2,6 +2,7 @@ import classes from "./OrderItem.module.css";
 
 const OrderItem = (props) => {
   const total = `${(props.item.qty * props.item.price).toFixed(2)}`;
+
   return (
     <li className={classes["cart-container"]}>
       <div className={classes["cart-content"]}>

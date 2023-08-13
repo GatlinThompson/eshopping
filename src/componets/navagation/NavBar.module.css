@@ -40,12 +40,13 @@
   font-size: 2rem;
   font-weight: 600;
   color: white;
+  font-family: "Roboto", sans-serif;
 }
 
 .logo > h4 > a > span {
   color: #e99b34;
   font-size: 2.2rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .nav-items {
@@ -70,14 +71,10 @@
 
   .logo > h4 > a {
     font-size: 1.4rem;
-    font-weight: 600;
-    color: white;
   }
 
   .logo > h4 > a > span {
-    color: #e99b34;
     font-size: 1.5rem;
-    font-weight: 600;
   }
 
   .logo {

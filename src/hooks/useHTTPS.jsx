@@ -10,7 +10,6 @@ const useHttp = () => {
     try {
       const response = await fetch(requestData.url, {
         method: requestData.method ? requestData.method : "GET",
-        //headers: requestConfig.headers ? requestConfig.headers : {},
         body: requestData.body ? JSON.stringify(requestData.body) : null,
       });
 

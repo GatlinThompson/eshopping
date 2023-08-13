@@ -1,6 +1,6 @@
 import classes from "./CatalogItem.module.css";
 import Ratings from "./Ratings";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const CatalogItem = (props) => {
   return (
@@ -18,7 +18,7 @@ const CatalogItem = (props) => {
       </h4>
       <div className={`mt-auto pt-3 ${classes["button-container"]}`}>
         <button type="button" className={classes.button}>
-          <NavLink to={`/item/${props.product.id}`}>Check Out Item</NavLink>
+          <Link to={`/item/${props.product.id}`}>Check Out Item</Link>
         </button>
       </div>
     </li>

@@ -26,10 +26,6 @@ const ShippingForm = (props) => {
 
   useEffect(() => {
     let valid = false;
-    //if (!validState || !validCity || !validAddress || !validZip) {
-    //  console.log("AAA");
-    //  return;
-    //}
 
     if (validState && validCity && validAddress && validZip) {
       valid = true;

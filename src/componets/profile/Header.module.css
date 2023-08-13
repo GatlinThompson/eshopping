@@ -1,0 +1,41 @@
+.header {
+  padding-top: 4.5rem;
+  display: flex;
+  color: #646363;
+  gap: 1rem;
+  margin: auto;
+}
+
+.header > h1 {
+  font-weight: 300;
+  font-size: 6rem;
+  margin: 0;
+  flex-grow: 1;
+  line-height: 144px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon > i {
+  font-size: 6rem;
+}
+
+@media all and (max-width: 425px) {
+  .icon > i {
+    font-size: 4rem;
+  }
+  .header > h1 {
+    font-weight: 300;
+    font-size: 4rem;
+    line-height: 96px;
+  }
+  .header {
+    padding-top: 2.5rem;
+    width: 90%;
+    margin: auto;
+  }
+}

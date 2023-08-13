@@ -122,17 +122,15 @@ ul.menu.clicked {
   margin-left: 1rem;
 }
 .logo > h4 > a {
-  text-decoration: none;
-  color: white;
-}
-.logo > h4 > a {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   color: white;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
 }
 
 .logo > h4 > a > span {
   color: #e99b34;
   font-size: 2.2rem;
-  font-weight: 600;
+  font-weight: 500;
 }

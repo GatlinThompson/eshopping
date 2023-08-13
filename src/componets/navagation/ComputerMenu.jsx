@@ -46,7 +46,7 @@ const ComputerMenu = () => {
             <NavLink to="login">
               <div className={classes.cart}>
                 <i className="bi bi-person-fill"></i>
-                <p className="d-xl-block d-none">Login</p>
+                <p className="d-lg-block d-none">Login</p>
               </div>
             </NavLink>
           </button>
@@ -55,10 +55,10 @@ const ComputerMenu = () => {
       {userCtx.loggedIn && (
         <li className={classes.item}>
           <button type="button" className={classes["button-menu"]}>
-            <NavLink to="login">
+            <NavLink to="/profile">
               <div className={classes.cart}>
                 <i className="bi bi-person-fill"></i>
-                <p className="d-xl-block d-none">{name}</p>
+                <p className="d-lg-block d-none">{name}</p>
               </div>
             </NavLink>
           </button>

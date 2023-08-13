@@ -105,8 +105,8 @@ const userReducer = (state, action) => {
   //USER LOGIN
   if (action.type == "LOGIN") {
     let name = action.name;
-    if (action.name.length > 6) {
-      let shortName = action.name.slice(0, 6);
+    if (action.name.length > 8) {
+      let shortName = action.name.slice(0, 8);
       shortName = shortName + "...";
       name = shortName;
     }

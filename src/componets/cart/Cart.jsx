@@ -11,7 +11,6 @@ const Cart = () => {
 
   const orderCartHandler = () => {
     navigate("/order");
-    //userCtx.order();
   };
 
   return (

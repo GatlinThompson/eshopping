@@ -1,0 +1,63 @@
+.order-container {
+  border-top: 1px solid gray;
+  padding: 1rem;
+  padding-top: 2rem;
+}
+
+.date {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.total {
+  font-size: 2.3rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.total > span {
+  color: rgb(252, 42, 0);
+  display: flex;
+  font-weight: 500;
+}
+.total > span > span {
+  font-size: 1.7rem;
+  margin-top: 0.3rem;
+}
+
+.order-log {
+  list-style: none;
+  padding-left: 0;
+}
+
+@media all and (max-width: 768px) {
+  .total {
+    font-size: 2rem;
+  }
+
+  .total > span > span {
+    font-size: 1.7rem;
+    margin-top: 0.15rem;
+  }
+
+  .date {
+    font-size: 2.1rem;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .total {
+    font-size: 2rem;
+  }
+
+  .total > span > span {
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+  }
+
+  .date {
+    font-size: 1.8rem;
+  }
+}
