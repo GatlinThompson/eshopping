@@ -1,0 +1,51 @@
+.total-amount {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: rgb(252, 42, 0);
+  display: flex;
+}
+
+.total {
+  font-weight: 700;
+  color: #413f3f;
+}
+
+.money {
+  padding-left: 1.1rem;
+  font-size: 1.5rem;
+  align-self: flex-start;
+  margin-top: 0.3rem;
+}
+
+.cart-total {
+  margin-top: 7rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+}
+
+.button {
+  margin-top: 1rem;
+  background-color: #febd69;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  position: relative;
+  margin-left: 5%;
+  border-radius: 0.4rem;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
+  transition: background-color ease 150ms, scale ease 150ms,
+    box-shadow ease 150ms;
+}
+
+.button:hover {
+  background-color: #e99b34;
+  scale: 1.02;
+  box-shadow: 0px 10px 20px -3px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+  color: #131921;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 2rem;
+}

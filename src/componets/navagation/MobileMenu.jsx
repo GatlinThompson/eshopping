@@ -30,13 +30,9 @@ const MobileMenu = (props) => {
     auth.signOut();
   };
   return (
-    <ul
-      className={`${classes.menu} ${classes[clicked]} ${classes[growing]}`}
-      onTouchEnd={closeMenu}
-    >
+    <ul className={`${classes.menu} ${classes[clicked]} ${classes[growing]}`}>
       <li className={`${classes.logo}`}>
         <h4>
-          {" "}
           <NavLink to="/">
             <span>e</span>Shopping{" "}
           </NavLink>
@@ -92,7 +88,7 @@ const MobileMenu = (props) => {
 
       {userCtx.loggedIn && (
         <li className={classes["item-button"]}>
-          <NavLink to="/">
+          <NavLink to="/" onClick={signOutHandler}>
             <button
               type="button"
               className={classes["sign-button"]}

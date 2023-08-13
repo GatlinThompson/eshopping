@@ -13,6 +13,7 @@ import UserContext from "./store/user-context";
 import { auth } from "../firebase";
 
 import UserProvider from "./store/UserProvider";
+import OrderPage from "./pages/Order";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
       { path: "login", element: <LoginPage /> },
       { path: "signup", element: <SignUpPage /> },
       { path: "cart", element: <CartPage /> },
+      { path: "order", element: <OrderPage /> },
     ],
   },
 ]);

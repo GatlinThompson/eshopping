@@ -43,7 +43,11 @@ const CartItem = (props) => {
               Quantity: <span className={classes.qty}>{props.item.qty}</span>
             </p>
             <p>
-              Item Price: <span className={classes.total}> ${total}</span>
+              Item Price:{" "}
+              <span className={classes.total}>
+                <span className={classes["item-money"]}>$</span>
+                {total}
+              </span>
             </p>
           </div>
         </div>

@@ -1,7 +1,6 @@
 import UserContext from "./user-context";
 import { useEffect, useReducer } from "react";
 import useHttp from "../hooks/useHTTPS";
-import { auth } from "../../firebase";
 
 const defaultUserState = {
   loggedIn: false,
@@ -96,8 +95,6 @@ const userReducer = (state, action) => {
     for (const index in action.item) {
       let itemTotal = action.item[index].price * action.item[index].qty;
       total += itemTotal;
-      console.log("FOR LOOP");
-      console.log(total);
     }
     return {
       ...state,
@@ -108,7 +105,6 @@ const userReducer = (state, action) => {
   //USER LOGIN
   if (action.type == "LOGIN") {
     let name = action.name;
-    console.log(name);
     if (action.name.length > 6) {
       let shortName = action.name.slice(0, 6);
       shortName = shortName + "...";
@@ -119,6 +115,15 @@ const userReducer = (state, action) => {
       loggedIn: true,
       name: name,
       id: action.id,
+    };
+  }
+
+  //USER ORDERED
+  if ((action.type = "ORDER")) {
+    return {
+      ...state,
+      cart: [],
+      totalAmount: 0,
     };
   }
 
@@ -148,6 +153,10 @@ const UserProvider = (props) => {
 
   const getLoggedInHandler = (name, id) => {
     dispatchUserAction({ type: "LOGIN", name: name, id: id });
+  };
+
+  const orderCartHandler = () => {
+    dispatchUserAction({ type: "ORDER" });
   };
 
   const getCartHandler = (id) => {
@@ -188,10 +197,10 @@ const UserProvider = (props) => {
     lowerItem: lowerItemToCartHandler,
     login: getLoggedInHandler,
     getCart: getCartHandler,
+    order: orderCartHandler,
   };
 
   const updateDBCart = async (user) => {
-    ///Add total later
     const userID = JSON.stringify(user);
     updateCart({
       url: `https://eshoppi-b6671-default-rtdb.firebaseio.com/users/${userID}.json`,

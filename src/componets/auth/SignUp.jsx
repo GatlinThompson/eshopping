@@ -47,8 +47,6 @@ const SignUp = () => {
   };
 
   const setUpNewUserDB = async (userID) => {
-    console.log("In db put");
-    console.log(userID);
     sendNewUser({
       url: `https://eshoppi-b6671-default-rtdb.firebaseio.com/users/${userID}.json`,
       method: "PUT",
@@ -68,8 +66,6 @@ const SignUp = () => {
     auth
       .createUserWithEmailAndPassword(email, password)
       .then(async (userCredential) => {
-        console.log(userCredential);
-        console.log(auth);
         const user = userCredential.user;
 
         await user.updateProfile({ displayName: firstName });
@@ -77,13 +73,9 @@ const SignUp = () => {
         userCredential.user.updateProfile({
           displayName: firstName,
         });
-        console.log("IUN SIGN UP");
-        console.log(firstName);
 
-        console.log("signup name: " + UserContext.name);
-        console.log(userCredential.user.uid);
-        const userID = JSON.stringify(userCredential.user.uid);
         setSignupError(false);
+        const userID = JSON.stringify(userCredential.user.uid);
         setUpNewUserDB(userID);
         setFirstName("");
         setLastName("");
@@ -92,7 +84,6 @@ const SignUp = () => {
         navigate("/login");
       })
       .catch((error) => {
-        console.log(error);
         setSignupError(true);
         setErrorMessage(error.message);
       });

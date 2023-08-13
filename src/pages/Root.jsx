@@ -10,7 +10,10 @@ const RootLayout = () => {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
-        userCtx.login(user.displayName, user.uid);
+        if (user.displayName) {
+          userCtx.login(user.displayName, user.uid);
+        }
+
         userCtx.getCart(user.uid);
       } else {
         userCtx.clearUser();

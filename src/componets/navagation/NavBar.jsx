@@ -38,8 +38,10 @@ const NavBar = () => {
     if (!showNav) {
       return;
     }
-    console.log("ASDASDASD");
-    showNavHandler();
+    const timer = setTimeout(() => {
+      showNavHandler();
+      clearTimeout(timer);
+    }, 200);
   };
 
   return (

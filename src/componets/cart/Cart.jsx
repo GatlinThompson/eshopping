@@ -1,10 +1,18 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import UserContext from "../../store/user-context";
 import CartItem from "./CartItem";
 import NoCartMessage from "./NoCartMessage";
+import classes from "./Cart.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const userCtx = useContext(UserContext);
+  const navigate = useNavigate();
+
+  const orderCartHandler = () => {
+    navigate("/order");
+    //userCtx.order();
+  };
 
   return (
     <main className={"container"}>
@@ -15,7 +23,16 @@ const Cart = () => {
               <CartItem key={item.itemID} item={item} />
             ))}
           </ul>
-          <h1>Total: ${userCtx.totalAmount.toFixed(2)}</h1>
+          <div className={classes["cart-total"]}>
+            <h1 className={classes["total-amount"]}>
+              <span className={classes.total}>Total:</span>{" "}
+              <span className={classes.money}>$</span>
+              {userCtx.totalAmount.toFixed(2)}
+            </h1>
+            <button className={classes.button} onClick={orderCartHandler}>
+              Order
+            </button>
+          </div>
         </>
       )}
       {!userCtx.cart.length && <NoCartMessage />}

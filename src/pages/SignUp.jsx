@@ -4,19 +4,6 @@ import { useEffect } from "react";
 import { auth } from "../../firebase";
 
 const SignUpPage = () => {
-  const navigate = useNavigate();
-  const returnHome = () => {
-    return navigate("..");
-  };
-
-  useEffect(() => {
-    auth.onAuthStateChanged((user) => {
-      if (user) {
-        //returnHome();
-      }
-    });
-  }, []);
-
   return (
     <>
       <SignUp />
