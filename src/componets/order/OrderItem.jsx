@@ -16,7 +16,7 @@ const OrderItem = (props) => {
               Quantity: <span className={classes.qty}>{props.item.qty}</span>
             </p>
             <p>
-              Item Price:{" "}
+              Item Price:
               <span className={classes.total}>
                 <span className={classes["item-money"]}>$</span>
                 {total}
