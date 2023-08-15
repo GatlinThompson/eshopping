@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { auth } from "../../../firebase";
 import { useContext } from "react";
 import UserContext from "../../store/user-context";
+import CartNumber from "./CartNumber";
 
 const MobileMenu = (props) => {
   const clicked = props.clicked;
@@ -42,7 +43,7 @@ const MobileMenu = (props) => {
               <i className="bi bi-cart"></i>
 
               <div className={classes["cart-text"]}>
-                {userCtx.cart.length > 0 && <span>{userCtx.cart.length}</span>}
+                {userCtx.cart.length > 0 && <CartNumber />}
               </div>
             </div>{" "}
             <p className="">Cart</p>
